@@ -59,6 +59,7 @@ let direct_kv_ro dirname =
       (`Spt, crunch dirname);
       (`Muen, crunch dirname);
       (`Genode, crunch dirname);
+      (`Ahv, crunch dirname);
     ]
     ~default:(direct_kv_ro dirname)
 

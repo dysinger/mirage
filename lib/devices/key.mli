@@ -20,7 +20,7 @@ include module type of Functoria.Key
 
 type mode_unix = [ `Unix | `MacOSX ]
 type mode_xen = [ `Xen | `Qubes ]
-type mode_solo5 = [ `Hvt | `Spt | `Virtio | `Muen | `Genode ]
+type mode_solo5 = [ `Hvt | `Spt | `Virtio | `Muen | `Genode | `Ahv ]
 type mode_unikraft = [ `Firecracker | `QEMU ]
 type mode = [ mode_unix | mode_xen | mode_solo5 | mode_unikraft ]
 

@@ -49,5 +49,6 @@ let default_network =
       (`Virtio, netif "service");
       (`Muen, netif "service");
       (`Genode, netif "service");
+      (`Ahv, netif "service");
     ]
     ~default:(netif "0")

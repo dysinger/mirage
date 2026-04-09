@@ -29,7 +29,7 @@ let pp_group = Fmt.(option ~none:(any "the unikernel") @@ fmt "the %s group")
 
 type mode_unix = [ `Unix | `MacOSX ]
 type mode_xen = [ `Xen | `Qubes ]
-type mode_solo5 = [ `Hvt | `Spt | `Virtio | `Muen | `Genode ]
+type mode_solo5 = [ `Hvt | `Spt | `Virtio | `Muen | `Genode | `Ahv ]
 type mode_unikraft = [ `Firecracker | `QEMU ]
 type mode = [ mode_unix | mode_xen | mode_solo5 | mode_unikraft ]
 
@@ -45,6 +45,7 @@ let (target_conv : mode Cmdliner.Arg.conv), target_doc_alts =
       ("qubes", `Qubes);
       ("genode", `Genode);
       ("spt", `Spt);
+      ("ahv", `Ahv);
       ("unikraft-firecracker", `Firecracker);
       ("unikraft-qemu", `QEMU);
     ]

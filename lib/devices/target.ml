@@ -212,7 +212,7 @@ module Solo5 = struct
 
   let solo5_manifest_path = Fpath.v "manifest.json"
 
-  type solo5_target = [ `Virtio | `Muen | `Hvt | `Genode | `Spt ]
+  type solo5_target = [ `Virtio | `Muen | `Hvt | `Genode | `Spt | `Ahv ]
   type xen_target = [ `Xen | `Qubes ]
   type t = [ solo5_target | xen_target ]
 
@@ -306,6 +306,7 @@ module Solo5 = struct
     | `Hvt -> ".hvt"
     | `Genode -> ".genode"
     | `Spt -> ".spt"
+    | `Ahv -> ".ahv"
     | `Xen | `Qubes -> ".xen"
     | _ -> invalid_arg "solo5 bindings only defined for solo5 targets"
 
@@ -350,6 +351,7 @@ module Solo5 = struct
     | `Muen -> "muen"
     | `Genode -> "genode"
     | `Spt -> "spt"
+    | `Ahv -> "ahv"
 
   let flags =
     (* Disable "70 [missing-mli] Missing interface file." as we are only
