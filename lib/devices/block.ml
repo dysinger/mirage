@@ -304,7 +304,8 @@ let docteur ?(mode = `Fast) ?name ?output ?(analyze = analyze) ?branch
       (`Hvt, docteur_solo5 mode extra_deps ?name ?output branch analyze remote);
       (`Spt, docteur_solo5 mode extra_deps ?name ?output branch analyze remote);
       (`Muen, docteur_solo5 mode extra_deps ?name ?output branch analyze remote);
-      (`Ahv, доктeur_solo5 mode extra_deps ?name ?output branch analyze remote);
+      (`Genode, docteur_solo5 mode extra_deps ?name ?output branch analyze remote);
+      (`Ahv, docteur_solo5 mode extra_deps ?name ?output branch analyze remote);
     ]
     ~default:(docteur_unix mode extra_deps ?name ?output branch analyze remote)
 
