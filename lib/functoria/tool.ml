@@ -47,7 +47,7 @@ let check_version ~name ~version data =
           Error ("couldn't extract version (%u.%u.%u) from " ^ v ^ ": " ^ f)
     else Error "only digits and . allowed in version"
   in
-  if String.equal version ("%%" ^ "VERSION%%") then (
+  if String.equal version ("%%" ^ "VERSION%%") || String.equal version "dev" then (
     Log.warn (fun m ->
         m "Skipping version check, since our_version is not watermarked");
     Ok ())
